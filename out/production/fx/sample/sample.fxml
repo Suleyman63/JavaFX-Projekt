@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <TabPane layoutX="-1.0" prefHeight="800.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="PROFESSOR">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label layoutX="27.0" layoutY="99.0" text="ID">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="27.0" layoutY="158.0" text="NAME">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="prof_id" layoutX="189.0" layoutY="109.0" prefHeight="26.0" prefWidth="164.0" />
+                                <TextField fx:id="prof_rang" layoutX="189.0" layoutY="275.0" prefHeight="26.0" prefWidth="161.0" />
+                                <Label layoutX="24.0" layoutY="276.0" text="RANG">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="pro_name" layoutX="188.0" layoutY="157.0" prefHeight="26.0" prefWidth="165.0" />
+                                <TextField fx:id="gbr" layoutX="190.0" layoutY="334.0" prefHeight="26.0" prefWidth="157.0" />
+                                <TextField fx:id="ass_list" layoutX="188.0" layoutY="463.0" prefHeight="26.0" prefWidth="153.0" />
+                                <Label layoutX="18.0" layoutY="333.0" text="GEHALTBRUTTO">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="13.0" layoutY="461.0" text="ASSISTENT">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Label>
+                                <Text layoutX="14.0" layoutY="417.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VORLESUNG">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Text>
+                                <TextField fx:id="vorl_list" layoutX="188.0" layoutY="396.0" prefHeight="26.0" prefWidth="155.0" />
+                                <TextField fx:id="n_gehalt" layoutX="461.0" layoutY="145.0" prefHeight="26.0" prefWidth="126.0" />
+                                <Text layoutX="494.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NETTO">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Text>
+                                <Text layoutX="26.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STUERKLASSE">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Text>
+                                <TextField fx:id="steuer_klasse" layoutX="188.0" layoutY="217.0" prefHeight="26.0" prefWidth="162.0" />
+                                <Button fx:id="btn1" layoutX="265.0" layoutY="537.0" mnemonicParsing="false" onAction="#zeigeGehalt" text="CALCULATE">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="btn_loeschen" layoutX="190.0" layoutY="537.0" mnemonicParsing="false" onAction="#leereFelder" text="DELETE">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Button>
+                                <Label fx:id="warnung" layoutX="166.0" layoutY="72.0" text="BITTE GEBEN SIE STUERKLASSE 1,3,4,5,6" textFill="#207954">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="ASSISTENT">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TextField fx:id="id_assis" layoutX="187.0" layoutY="124.0" prefHeight="26.0" prefWidth="156.0" />
+                                <TextField fx:id="name_assis" layoutX="187.0" layoutY="174.0" prefHeight="26.0" prefWidth="162.0" />
+                                <TextField fx:id="bg_assis" layoutX="181.0" layoutY="226.0" prefHeight="26.0" prefWidth="160.0" />
+                                <TextField fx:id="stk_assis" layoutX="181.0" layoutY="282.0" prefHeight="26.0" prefWidth="164.0" />
+                                <TextField fx:id="netto_assis" layoutX="432.0" layoutY="173.0" prefHeight="26.0" prefWidth="113.0" />
+                                <Label layoutX="12.0" layoutY="126.0" text="ID">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="12.0" layoutY="177.0" text="NAME">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="10.0" layoutY="228.0" text="BRUTTOGEHALT">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="8.0" layoutY="284.0" text="STUERKLASSE">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="457.0" layoutY="126.0" text="NETTO">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Label>
+                                <Button fx:id="loeschen_assis" layoutX="175.0" layoutY="356.0" mnemonicParsing="false" onAction="#felderloeschen" prefHeight="39.0" prefWidth="80.0" text="CLEAR">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="info_assis" layoutX="261.0" layoutY="356.0" mnemonicParsing="false" onAction="#info_netto" prefHeight="40.0" prefWidth="107.0" text="CALCULATE">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Button>
+                        <Label layoutX="215.0" layoutY="64.0" text="BITTE GEBEN SIE STUERKLASSE 1,3,4,5,6" textFill="#207954" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="RECHNER">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <MenuBar layoutX="6.0" layoutY="8.0" prefHeight="35.0" prefWidth="200.0" style="-fx-border-color: black;">
+                                    <menus>
+                                        <Menu mnemonicParsing="false" text="Eine Zahl">
+                                            <items>
+                                                <MenuItem fx:id="teiler" mnemonicParsing="false" onAction="#teilerFunc" text="Teiler" />
+                                                <MenuItem fx:id="fakR" mnemonicParsing="false" onAction="#fakR_function" text="Fakulitaet Rekrursive" />
+                                                <MenuItem fx:id="fakulI" mnemonicParsing="false" onAction="#fakulIFunction" text="fakulitaet iterativ" />
+                                            </items>
+                                        </Menu>
+                                        <Menu mnemonicParsing="false" text="Zwei Zahlen">
+                                            <items>
+                                                <MenuItem fx:id="add" mnemonicParsing="false" onAction="#addFunction" text="add" />
+                                                <MenuItem fx:id="multi" mnemonicParsing="false" onAction="#multiFunction" text="multi" />
+                                                <MenuItem fx:id="div" mnemonicParsing="false" onAction="#divFunction" text="div" />
+                                                <MenuItem fx:id="mod" mnemonicParsing="false" onAction="#mofFunction" text="mod" />
+                                                <MenuItem fx:id="hoch" mnemonicParsing="false" onAction="#hochFunktion" text="hoch" />
+                                                <MenuItem fx:id="wurzel" mnemonicParsing="false" onAction="#wrzelFunktion" text="wurzel" />
+                                            </items>
+                                        </Menu>
+                                    </menus>
+                                </MenuBar>
+                                <Circle fill="WHITE" layoutX="338.0" layoutY="146.0" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+                                <Circle fill="#fcfcfc" layoutX="206.0" layoutY="146.0" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+                                <Circle fill="WHITE" layoutX="76.0" layoutY="144.0" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+                                <Circle fill="WHITE" layoutX="464.0" layoutY="146.0" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+                                <Circle fill="WHITE" layoutX="590.0" layoutY="146.0" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+                                <TextField fx:id="z1" layoutX="21.0" layoutY="312.0" prefHeight="26.0" prefWidth="134.0" />
+                                <TextField fx:id="z2" layoutX="243.0" layoutY="312.0" prefHeight="26.0" prefWidth="150.0" />
+                                <Label layoutX="71.0" layoutY="282.0" text="Zahl1" />
+                                <Label layoutX="301.0" layoutY="282.0" text="Zahl2" />
+                                <Label layoutX="528.0" layoutY="273.0" text="Ergbniss" />
+                                <TextField fx:id="rech_ergb" layoutX="490.0" layoutY="312.0" prefHeight="26.0" prefWidth="128.0" />
+                                <Button fx:id="multi_btn" layoutX="215.0" layoutY="425.0" mnemonicParsing="false" onAction="#multiFunction" prefHeight="31.0" prefWidth="60.0" text="*">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="division_btn" layoutX="373.0" layoutY="425.0" mnemonicParsing="false" onAction="#divFunction" prefHeight="31.0" prefWidth="60.0" text="/">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="modulus_btn" layoutX="527.0" layoutY="516.0" mnemonicParsing="false" onAction="#mofFunction" text="MOD">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="fakulitaet_btn" layoutX="536.0" layoutY="425.0" mnemonicParsing="false" onAction="#fakR_function" text="!">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="teiler_btn" layoutX="371.0" layoutY="516.0" mnemonicParsing="false" onAction="#teilerFunc" text="TEILER">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="hoch_btn" layoutX="206.0" layoutY="517.0" mnemonicParsing="false" onAction="#hochFunktion" text="HOCH">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="wurz_btn" layoutX="37.0" layoutY="517.0" mnemonicParsing="false" onAction="#wrzelFunktion" text="WURZEL">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="btn_add" layoutX="58.0" layoutY="425.0" mnemonicParsing="false" onAction="#addFunction" prefHeight="31.0" prefWidth="60.0" text="+">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Button>
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>
